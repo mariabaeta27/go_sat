@@ -8,9 +8,13 @@
 
 ![Descrição da Imagem](./public/assets/front.png)
 
+## ATENÇÂO:
+
+[Servidor](https://github.com/mariabaeta27/api-go-sat) da API Go Sat precisa está rodando em conjunto com esse projeto
+
 ## Setup dp projeto
 
-- Baixe o repositorio [Git](https://github.com/mariabaeta27/onfly)
+- Baixe o repositorio [Git](https://github.com/mariabaeta27/go_sat)
 - Acesso a pasta do projeto
 
 ## Instale as dependências
