@@ -2,17 +2,17 @@
 
 **Pessoa avaliada:** [Maria Baeta](https://github.com/mariabaeta27)
 
-**Stacks**: VUE 3, TypeScript, Quasar,
+**Stacks**: VUE 3, TypeScript, Quasar
 
-**Desafio**: Desenvolver um relatório gráfico para consumir a desenvolvida
+**Desafio**: Desenvolver um relatório gráfico para consumir [API Go Sat](https://github.com/mariabaeta27/api-go-sat)
 
 ![Descrição da Imagem](./public/assets/front.png)
 
-## ATENÇÂO:
+## ATENÇÃO:
 
 [Servidor](https://github.com/mariabaeta27/api-go-sat) da API Go Sat precisa está rodando em conjunto com esse projeto
 
-## Setup dp projeto
+## Setup do projeto
 
 - Baixe o repositorio [Git](https://github.com/mariabaeta27/go_sat)
 - Acesso a pasta do projeto
