@@ -1,5 +1,5 @@
 <template>
-  <q-page class="row items-center justify-evenly">
+  <q-page class="row q-pa-xl">
     <SimulationsTable></SimulationsTable>
   </q-page>
 </template>

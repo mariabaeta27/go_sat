@@ -1,41 +1,46 @@
-# Quasar App (go-sat)
+# Go sat
 
-A Quasar Project
+**Pessoa avaliada:** [Maria Baeta](https://github.com/mariabaeta27)
 
-## Install the dependencies
+**Stacks**: VUE 3, TypeScript, Quasar,
+
+**Desafio**: Desenvolver um relatório gráfico para consumir a desenvolvida
+
+![Descrição da Imagem](./public/assets/front.png)
+
+## Setup dp projeto
+
+- Baixe o repositorio [Git](https://github.com/mariabaeta27/onfly)
+- Acesso a pasta do projeto
+
+## Instale as dependências
+
 ```bash
-yarn
-# or
-npm install
+yarn install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Inicie o aplicativo no modo de desenvolvimento (recarregamento de código ativo, relatório de erros, etc.)
+
 ```bash
-quasar dev
+yarn  dev
 ```
 
+### Lint os arquivos
 
-### Lint the files
 ```bash
 yarn lint
-# or
-npm run lint
+
 ```
 
+### Formate os arquivos
 
-### Format the files
 ```bash
 yarn format
-# or
-npm run format
+
 ```
 
+### Crie o aplicativo para produção
 
-
-### Build the app for production
 ```bash
-quasar build
+yarn build
 ```
-
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
