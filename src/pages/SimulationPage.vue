@@ -1,15 +1,21 @@
 <template>
-  <q-page class="row q-pa-xl">
-    <SimulationsTable></SimulationsTable>
+  <q-page class="row q-pa-xl q-page-custom">
+    <TableComponent></TableComponent>
   </q-page>
 </template>
 
 <script lang="ts">
-import SimulationsTable from 'src/components/SimulationsTable.vue';
+import TableComponent from 'src/components/TableComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { SimulationsTable },
+  components: { TableComponent },
 });
 </script>
+
+<style>
+.q-page-custom {
+  justify-content: center;
+}
+</style>

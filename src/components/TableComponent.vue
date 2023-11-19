@@ -1,16 +1,15 @@
 <template>
   <div>
     <q-table
-      title="Simulações Go Sat"
+      title="Simulações"
       :rows="rows"
       :columns="columns"
       row-key="name"
       no-data-label="Não há simulações salvas no banco!"
       :loading="loading"
-      fullscreen
-      dense
       separator="cell"
       class="text-center"
+      bordered
     >
       <template v-slot:body="props">
         <q-tr :props="props" class="text-center">
@@ -24,7 +23,6 @@
 
           <q-td key="cliente" :props="props">
             {{ props.row.cliente }}
-            {{ props.row.created_at }}
           </q-td>
 
           <q-td key="valorSolicitado" :props="props">
@@ -72,7 +70,7 @@ import { cpf } from 'cpf-cnpj-validator';
 import { defineComponent } from 'vue';
 import { Simulations, Rows } from './models';
 export default defineComponent({
-  name: 'SimulationTable',
+  name: 'TableComponent',
 
   data() {
     return {
