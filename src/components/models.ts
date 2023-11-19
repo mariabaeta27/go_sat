@@ -11,6 +11,7 @@ export interface Simulations {
   valorSolicitado: number;
   qntParcelas: number;
   simulacoes: Simulation[] | string[];
+  created_at: Date;
 }
 
 export interface Rows {

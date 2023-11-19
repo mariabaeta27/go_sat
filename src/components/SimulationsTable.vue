@@ -1,22 +1,30 @@
 <template>
   <div>
     <q-table
-      title="Simulações"
+      title="Simulações Go Sat"
       :rows="rows"
       :columns="columns"
       row-key="name"
-      style="max-width: 800vw"
       no-data-label="Não há simulações salvas no banco!"
       :loading="loading"
+      fullscreen
+      dense
+      separator="cell"
+      class="text-center"
     >
       <template v-slot:body="props">
-        <q-tr :props="props" class="">
+        <q-tr :props="props" class="text-center">
           <q-td key="id" :props="props">
             {{ props.row.id }}
           </q-td>
 
+          <q-td key="created_at" :props="props">
+            {{ props.row.created_at }}
+          </q-td>
+
           <q-td key="cliente" :props="props">
             {{ props.row.cliente }}
+            {{ props.row.created_at }}
           </q-td>
 
           <q-td key="valorSolicitado" :props="props">
@@ -31,6 +39,7 @@
             <div
               v-for="simulacao in props.row.simulacoes"
               :key="simulacao.modalidadeCredito"
+              class="text-justify"
             >
               <div v-if="typeof simulacao !== 'string'">
                 <p>
@@ -40,12 +49,12 @@
                   {{ simulacao.instituicaoFinanceira }} -
                   <span class="text-weight-bold"> Modalidade: </span>
                   {{ simulacao.modalidadeCredito }} -
-                  <span class="text-weight-bold"> Valor a pagar: </span
-                  >{{ simulacao.valorApagar }} -
+                  <span class="text-weight-bold"> Valor a pagar: </span> R$
+                  {{ simulacao.valorApagar }}
+                  -
                   <span class="text-weight-bold"> Taxa de Juros:</span>
                   {{ simulacao.taxaJuros }}
                 </p>
-                <p></p>
               </div>
               <div v-else>
                 {{ simulacao }}
@@ -74,21 +83,33 @@ export default defineComponent({
           label: 'Id',
           field: 'id',
           sortable: true,
+          align: 'center',
+        },
+
+        {
+          name: 'created_at',
+          label: 'Data da simulação',
+          field: 'created_at',
+
+          align: 'center',
         },
         {
           name: 'cliente',
           label: 'Cliente',
           field: 'cliente',
+          align: 'center',
         },
         {
           name: 'valorSolicitado',
           label: 'Valor solicitado',
           field: 'valorSolicitado',
+          align: 'center',
         },
         {
           name: 'qntParcelas',
           label: 'Quant. parcelas',
           field: 'qntParcelas',
+          align: 'center',
         },
         {
           name: 'simulacoes',
@@ -96,6 +117,7 @@ export default defineComponent({
           field: 'simulacoes',
           style: 'width: 500px',
           headerStyle: 'width: 100px',
+          align: 'center',
         },
       ],
       rows: <Rows[]>[],
@@ -126,6 +148,7 @@ export default defineComponent({
       this.rows = data.map((item) => {
         return {
           id: item.id,
+          created_at: new Date(item.created_at).toLocaleDateString('pt-BR'),
           cliente: cpf.format(item.cliente),
           valorSolicitado: `R$ ${item.valorSolicitado}`,
           qntParcelas: item.qntParcelas,
