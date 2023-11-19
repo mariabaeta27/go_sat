@@ -7,6 +7,7 @@
       row-key="name"
       style="max-width: 800vw"
       no-data-label="Não há simulações salvas no banco!"
+      :loading="loading"
     >
       <template v-slot:body="props">
         <q-tr :props="props" class="">
@@ -98,7 +99,7 @@ export default defineComponent({
         },
       ],
       rows: <Rows[]>[],
-      showSimulation: true,
+      loading: false,
     };
   },
 
@@ -108,11 +109,14 @@ export default defineComponent({
   methods: {
     async fetchApi() {
       try {
+        this.loading = true;
         const response = await fetch('http://localhost:8000/api/simulation');
         const data = await response.json();
         this.simulations = data;
 
         this.formattedRows(data);
+
+        this.loading = false;
       } catch (error) {
         console.log(error);
       }
