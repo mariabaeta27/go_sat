@@ -8,13 +8,13 @@
 
 ![Descrição da Imagem](./public/assets/front.png)
 
-## ATENÇÃO:
+## ATENÇÃO
 
-[Servidor](https://github.com/mariabaeta27/api-go-sat) da API Go Sat precisa está rodando em conjunto com esse projeto
+[Servidor](https://github.com/mariabaeta27/api-go-sat) da API Go Sat precisa está rodando em conjunto com esse projeto.
 
 ## Setup do projeto
 
-- Baixe o repositorio [Git](https://github.com/mariabaeta27/go_sat)
+- Baixe o repositório [Git](https://github.com/mariabaeta27/go_sat)
 - Acesso a pasta do projeto
 
 ## Instale as dependências
@@ -23,7 +23,7 @@
 yarn install
 ```
 
-### Inicie o aplicativo no modo de desenvolvimento (recarregamento de código ativo, relatório de erros, etc.)
+### Inicie o aplicativo no modo de desenvolvimento
 
 ```bash
 yarn  dev
