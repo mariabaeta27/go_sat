@@ -76,17 +76,18 @@ export default defineComponent({
           }),
         });
         const data = await response;
+        console.log(data);
 
         if (data.status === 201) {
           this.message = 'Simulação consultado com sucesso';
           this.cardShow = true;
+          setTimeout(() => {
+            window.location.reload();
+          }, 5000);
         } else {
           this.message = 'Falha ao consultar simulação';
           this.cardShow = true;
         }
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000);
 
         console.log(data);
       } catch (error) {
