@@ -88,8 +88,6 @@ export default defineComponent({
           this.message = 'Falha ao consultar simulação';
           this.cardShow = true;
         }
-
-        console.log(data);
       } catch (error) {
         console.log(error);
       }
